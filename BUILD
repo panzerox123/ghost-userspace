@@ -196,6 +196,19 @@ cc_binary(
 )
 
 cc_binary(
+    name = "ghost_bench",
+    srcs = [
+        "tests/ghost_bench.cc",
+    ],
+    copts = compiler_flags,
+    deps = [
+        ":base",
+        ":ghost",
+    ],
+)
+
+
+cc_binary(
     name = "simple_edf",
     srcs = [
         "tests/simple_edf.cc",
